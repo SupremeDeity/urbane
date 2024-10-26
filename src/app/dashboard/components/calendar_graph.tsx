@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 export default function CalendarGraph({ data }: { data: CalendarDatum[] }) {
   const { theme } = useTheme();
   return (
-    <ResponsiveCalendar
+    (<ResponsiveCalendar
  
     align="center"
     from={"2024-01-01"}
@@ -35,7 +35,7 @@ export default function CalendarGraph({ data }: { data: CalendarDatum[] }) {
       tooltip={(val) => {
         return (
           // ! HOTFIX for nivo tooltip jitter bug - [tw-absolute tw-min-w-max -tw-translate-x-1/2 -tw-translate-y-full]
-          <div className="tw-text-nowrap tw-absolute !tw-z-40 tw-flex tw-place-items-center tw-gap-1 -tw-translate-x-full -tw-translate-y-full tw-rounded-md tw-bg-stone-200 tw-p-4 dark:tw-bg-slate-700">
+          (<div className="tw-text-nowrap tw-absolute !tw-z-40 tw-flex tw-place-items-center tw-gap-1 -tw-translate-x-full -tw-translate-y-full tw-rounded-md tw-bg-stone-200 tw-p-4 dark:tw-bg-slate-700">
             <span
               className={`tw-select-none tw-size-4 tw-rounded tw-font-semibold`}
               style={{ backgroundColor: val.color }}
@@ -43,9 +43,9 @@ export default function CalendarGraph({ data }: { data: CalendarDatum[] }) {
             <br />
             <span className="tw-font-semibold">{val.day}:</span>
             <span> {val.value}</span>
-          </div>
+          </div>)
         );
       }}
-    />
+    />)
   );
 }

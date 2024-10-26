@@ -14,6 +14,7 @@ const StorageGraph = dynamic(
 );
 
 import {
+  activity_graph_data,
   billing_graph_data,
   database_graph_data,
   storage_graph_data,

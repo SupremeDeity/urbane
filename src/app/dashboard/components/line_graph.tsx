@@ -13,6 +13,8 @@ export default function LineGraph({ data }: { data: Serie[] }) {
       margin={{ top: 20 }}
       pointSize={5}
       areaOpacity={0.15}
+      legends={[]}
+      defs={[]}
       enableCrosshair={false}
       pointBorderWidth={2}
       areaBlendMode="hard-light"

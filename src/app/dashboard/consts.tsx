@@ -14,13 +14,14 @@ export const routes = [
     icon: <BsPlugin />,
   },
   { routeName: "Logs", path: "/dashboard/logs", icon: <GoLog /> },
-  { routeName: "Database", path: "/dashboard/database", icon: <CgDatabase /> },
-  { routeName: "Storage", path: "/dashboard/storage", icon: <IoCloud /> },
+  { routeName: "Database", path: "/dashboard/database", icon: <CgDatabase />, disabled: true },
+  { routeName: "Storage", path: "/dashboard/storage", icon: <IoCloud />, disabled: true },
 
   {
     routeName: "Settings",
     icon: <IoSettingsOutline />,
     path: "/dashboard/settings",
+    disabled: true,
   },
 ];
 
